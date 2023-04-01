@@ -21,6 +21,5 @@ int main(int argc, char *argv[]){
 	for(int i = 0;i < data;i++){
 		printf("%c", *(buffer + i));
 	}
-	printf("\n");
 	return 0;
 }

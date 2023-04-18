@@ -1,0 +1,4 @@
+main.o: main.c cmd.h parse.h utest.h
+cmd.o: cmd.c cmd.h
+parse.o: parse.c parse.h cmd.h
+utest.o: utest.c utest.h

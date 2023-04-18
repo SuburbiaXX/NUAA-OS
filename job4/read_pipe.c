@@ -36,8 +36,9 @@ void read_pipe(char *command) {
     dup2(fd[0], 0);
     close(fd[0]);
     close(fd[1]);
-    read(0, buf, 65535);
-    printf("%s", buf);
+	while(read(0, buf, 65535)) {
+		write(1, buf, sizeof(buf));
+	}
 }
 
 int main() {

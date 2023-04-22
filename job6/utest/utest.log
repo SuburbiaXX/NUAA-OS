@@ -1,2 +1,0 @@
-app1: app1.c:44: test_sub: Assertion `sub(1, 1) == 0' failed.
-app1: app1.c:54: test_div0: Assertion `div0(5, 2) == 2' failed.

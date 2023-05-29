@@ -1,0 +1,11 @@
+tom	10	male
+jerry	11	male
+mike	13	male
+linus	20	male
+bing	18	female
+qing	18	female
+unix	18	male
+socket	100	male
+lin	100	male
+test	100	male
+nuaastudent	11	male

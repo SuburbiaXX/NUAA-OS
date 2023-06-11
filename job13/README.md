@@ -140,6 +140,3 @@ ls_enabled(void);
 /usr/include/selinux/selinux.h:/* Wrappers for the sel
 inuxfs (policy) API. */
 ```
-
-```
-

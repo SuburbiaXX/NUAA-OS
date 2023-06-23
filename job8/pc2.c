@@ -132,8 +132,8 @@ int main() {
     pthread_t consumer_tid, computer_tid; // 主线程为生产者, 创建消费者线程和计算者线程
     sema_init(&mutex1, 1);
     sema_init(&mutex2, 1);
-    sema_init(&wait_empty_buffer1, CAPACITY);
-    sema_init(&wait_empty_buffer2, CAPACITY);
+    sema_init(&wait_empty_buffer1, CAPACITY - 1);
+    sema_init(&wait_empty_buffer2, CAPACITY - 1);
     sema_init(&wait_full_buffer1, 0);
     sema_init(&wait_full_buffer2, 0);
 

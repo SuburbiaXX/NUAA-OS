@@ -2,7 +2,7 @@ from greenlet import greenlet
 
 def producer():
     for i in range(0, 8):
-        # 生成数据 b c d e f g h
+        # 生成数据 a b c d e f g h
         data = chr(ord('a') + i)
         print('producer: ', data)
         consumer_gr.switch(data)

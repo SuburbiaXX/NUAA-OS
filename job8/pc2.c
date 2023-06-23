@@ -7,22 +7,6 @@ int buffer1[CAPACITY], buffer2[CAPACITY];
 int in1, in2;
 int out1, out2;
 
-int buffer1_is_empty() {
-    return in1 == out1;
-}
-
-int buffer2_is_empty() {
-    return in2 == out2;
-}
-
-int buffer1_is_full() {
-    return (in1 + 1) % CAPACITY == out1;
-}
-
-int buffer2_is_full() {
-    return (in2 + 1) % CAPACITY == out2;
-}
-
 int get_item1() {
     int item;
     item = buffer1[out1];
@@ -41,6 +25,7 @@ void put_item1(int item) {
     buffer1[in1] = item;
     in1 = (in1 + 1) % CAPACITY;
 }
+
 
 void put_item2(int item) {
     buffer2[in2] = item;
@@ -132,8 +117,8 @@ int main() {
     pthread_t consumer_tid, computer_tid; // 主线程为生产者, 创建消费者线程和计算者线程
     sema_init(&mutex1, 1);
     sema_init(&mutex2, 1);
-    sema_init(&wait_empty_buffer1, CAPACITY - 1);
-    sema_init(&wait_empty_buffer2, CAPACITY - 1);
+    sema_init(&wait_empty_buffer1, CAPACITY);
+    sema_init(&wait_empty_buffer2, CAPACITY);
     sema_init(&wait_full_buffer1, 0);
     sema_init(&wait_full_buffer2, 0);
 
